@@ -1,0 +1,2887 @@
+<!-- FILE: donate.html (Corrected Complete Version) -->
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Primary Meta Tags -->
+    <title>GLOBAL PETPAL | Global Society for the Prevention of Cruelty to Animals</title>
+    <meta name="title" content="GLOBAL PETPAL | Global Society for the Prevention of Cruelty to Animals">
+    <meta name="description"
+        content="Join Global PetPal in our mission to prevent cruelty to animals worldwide. Support animal welfare, adopt pets, and make a difference in animals' lives.">
+    <meta name="keywords"
+        content="animal welfare, pet adoption, animal rescue, SPCA, animal rights, pet care, animal protection, global petpal">
+    <meta name="author" content="Global PetPal">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.yourdomain.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourdomain.com/">
+    <meta property="og:title" content="GLOBAL PETPAL | Global Society for the Prevention of Cruelty to Animals">
+    <meta property="og:description"
+        content="Join Global PetPal in our mission to prevent cruelty to animals worldwide. Support animal welfare, adopt pets, and make a difference in animals' lives.">
+    <meta property="og:image" content="assets/img/og-image.jpg">
+    <meta property="og:site_name" content="Global PetPal">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.yourdomain.com/">
+    <meta property="twitter:title" content="GLOBAL PETPAL | Global Society for the Prevention of Cruelty to Animals">
+    <meta property="twitter:description"
+        content="Join Global PetPal in our mission to prevent cruelty to animals worldwide. Support animal welfare, adopt pets, and make a difference in animals' lives.">
+    <meta property="twitter:image" content="assets/img/twitter-image.jpg">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="assets/site.webmanifest">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="assets/browserconfig.xml">
+
+    <!-- iOS Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Global PetPal">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --PETPAL-orange: #f75f00;
+            --PETPAL-blue: #0066b3;
+            --PETPAL-dark: #1a1a1a;
+            --PETPAL-white: #fff;
+            --border-radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --PETPAL-shadow: 0 4px 12px rgb(255, 255, 255);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--PETPAL-dark);
+        }
+
+        .modal {
+            backdrop-filter: blur(3px);
+        }
+
+        .card-custom {
+            position: relative;
+            padding: 2rem;
+            background: #1a1a2e;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card-custom::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #00f0ff, #00ff88, #00f0ff);
+            box-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff;
+            transform: translateY(-100%);
+            transition: transform 0.5s ease;
+        }
+
+        .card-custom:hover::before {
+            transform: translateY(0);
+        }
+
+        .card-custom:hover {
+            transform: translateY(-5px);
+        }
+
+        .btn {
+            position: relative;
+            padding: 0.75rem 1.5rem;
+            background: #2a2a4e;
+            color: #00f0ff;
+            border: 1px solid #00f0ff;
+            border-radius: 6px;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #ff00ff, #00f0ff, #ff00ff);
+            box-shadow: 0 0 15px #00f0ff, 0 0 30px #ff00ff;
+            transform: translateY(-100%);
+            transition: transform 0.4s ease;
+        }
+
+        .btn:hover::before {
+            transform: translateY(0);
+        }
+
+        .btn:hover {
+            background: #1a1a2e;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+
+
+        /* Header Styles */
+        .header-top {
+            background: var(--PETPAL-dark);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header-top .nav-link {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 14px;
+            padding: 0 15px;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .header-top .nav-link:hover {
+            color: var(--PETPAL-orange);
+        }
+
+        .main-header {
+            background: white;
+            padding: 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            max-height: 100px;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .main-header .container {
+            height: 100px;
+        }
+
+        .main-header .row {
+            height: 100%;
+        }
+
+        .main-header.fixed-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            max-height: 100px;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        body.header-fixed {
+            padding-top: 100px;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: var(--PETPAL-orange);
+            text-decoration: none;
+            line-height: 1;
+        }
+
+        .logo-desktop {
+            display: block;
+        }
+
+        .logo-mobile {
+            display: none;
+        }
+
+        .navbar-toggler {
+            border: none;
+            padding: 8px 12px;
+            background: transparent;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(247, 95, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+            width: 28px;
+            height: 28px;
+        }
+
+        #mainNav {
+            position: fixed;
+            top: 0px;
+            left: 40%;
+            transform: translateX(-50%);
+            width: 90%;
+            height: 100%;
+            max-width: none;
+            background: white;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            border-radius: 12px;
+            padding: 2rem;
+            z-index: 999;
+        }
+
+
+        #mainNav.collapsing {
+            transition: height 0.35s ease;
+        }
+
+        #mainNav.collapse:not(.show) {
+            display: none;
+        }
+
+        #mainNav.collapse.show {
+            display: block;
+        }
+
+        @media (min-width: 992px) {
+            #mainNav {
+                position: static;
+                width: auto;
+                transform: none;
+                background: transparent;
+                box-shadow: none;
+                border-radius: 0;
+                padding: 0;
+            }
+        }
+
+        .main-nav .nav-link {
+            color: var(--PETPAL-dark);
+            font-weight: 600;
+            padding: 12px 20px;
+            transition: all 0.3s;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        .main-nav .nav-link:hover {
+            color: var(--PETPAL-blue);
+            text-shadow: var(--PETPAL-shadow);
+            background: rgba(247, 95, 0, 0.05);
+        }
+
+        @media (max-width: 991px) {
+            .main-nav .navbar-nav {
+                width: 100%;
+            }
+
+            .main-nav .nav-link {
+                padding: 16px 14%;
+                background-color: #f9e9d5;
+            }
+
+            .main-nav .nav-link:last-child {
+                border-bottom: 1px solid #ed7f39;
+            }
+
+            .navy {
+                background-color: #f75e02;
+                /* padding: 15px 6px; */
+                /* border-right: 1px solid #fff; */
+                border-radius: 0px !important;
+                width: 87% !important;
+                height: 88% !important;
+                align-content: center;
+            }
+        }
+
+        .btn-donate-header {
+            background: var(--PETPAL-orange);
+            color: white;
+            padding: 30px 41px;
+            margin-right: 5px;
+            border-radius: 0;
+            font-weight: bold;
+            border: none;
+            transition: all 0.3s;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: var(--bs-btn-font-family);
+        }
+
+        .btn-donate-header:hover {
+            background: #d95400;
+            color: #8cf3f3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(247, 95, 0, 0.3);
+            border-top: #1500ff 5px solid;
+        }
+
+        .btn-donate {
+            background: var(--PETPAL-orange);
+            color: white;
+            padding: 10px 30px;
+            border-radius: 0;
+            font-weight: bold;
+            border: none;
+            transition: all 0.3s;
+        }
+
+        .btn-donate:hover {
+            background: #d95400;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(247, 95, 0, 0.3);
+        }
+
+        @media (max-width: 991px) {
+            .logo-desktop {
+                display: none;
+            }
+
+            .logo-mobile {
+                display: block;
+            }
+
+            /* Hero Carousel */
+            .hero-carousel {
+                height: 500px;
+            }
+
+            .hero-carousel .carousel-item {
+                height: 500px;
+            }
+        }
+
+        /* Hero Carousel */
+        .hero-carousel {
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-carousel .carousel-item {
+            height: 600px;
+        }
+
+        .hero-carousel img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            filter: brightness(0.8);
+            transition: var(--transition);
+        }
+
+        .hero-carousel .carousel-item.active img {
+            animation: kenBurns 8s ease-out;
+        }
+
+        @keyframes kenBurns {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            color: white;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 60px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+
+        .hero-content p {
+            font-size: 24px;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .hero-content .btn-donate {
+            padding: 16px 48px;
+            font-size: 18px;
+            box-shadow: 0 8px 24px rgba(247, 95, 0, 0.4);
+        }
+
+        /* Custom Carousel Thumbnails */
+        .carousel-thumbnails {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 10;
+        }
+
+        .carousel-thumbnail {
+            width: 100px;
+            height: 70px;
+            cursor: pointer;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: var(--transition);
+            opacity: 0.6;
+            backdrop-filter: blur(4px);
+        }
+
+        .carousel-thumbnail:hover {
+            opacity: 0.9;
+            transform: scale(1.08);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .carousel-thumbnail.active {
+            border-color: var(--PETPAL-orange);
+            opacity: 1;
+            box-shadow: 0 4px 16px rgba(247, 95, 0, 0.4);
+        }
+
+        .carousel-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            display: none;
+        }
+
+        /* Cards Section */
+        .card-custom {
+            border: none;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: var(--transition);
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .card-custom:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-custom img {
+            height: 300px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .card-custom:hover img {
+            transform: scale(1.05);
+        }
+
+        .card-custom .card-body {
+            padding: 1.5rem;
+        }
+
+        .icon-box {
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .icon-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .icon-box:hover {
+            transform: translateY(-8px);
+        }
+
+        .icon-box:hover::before {
+            opacity: 1;
+        }
+
+        .icon-box.orange {
+            background: linear-gradient(135deg, var(--PETPAL-orange), #ff7722);
+            color: white;
+            box-shadow: 0 8px 24px rgba(247, 95, 0, 0.25);
+        }
+
+        .icon-box.blue {
+            background: linear-gradient(135deg, var(--PETPAL-blue), #0088dd);
+            color: white;
+            box-shadow: 0 8px 24px rgba(0, 102, 179, 0.25);
+        }
+
+        .icon-box.white {
+            background: white;
+            color: var(--PETPAL-dark);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .icon-box i {
+            font-size: 56px;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .icon-box h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .icon-box p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .icon-box .btn {
+            border-radius: 8px;
+            padding: 10px 28px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .icon-box .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Newsletter */
+        .newsletter-section {
+            background: linear-gradient(135deg, #0066b3 0%, #0088dd 50%, #f75f00 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            animation: moveBackground 20s linear infinite;
+        }
+
+        @keyframes moveBackground {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(30px, 30px);
+            }
+        }
+
+        .newsletter-section .form-control {
+            border: none;
+            border-radius: 12px;
+            padding: 14px 20px;
+            font-size: 15px;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .newsletter-section .form-control:focus {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .newsletter-section .btn-light {
+            border-radius: 12px;
+            padding: 14px 48px;
+            font-weight: 700;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .newsletter-section .btn-light:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .newsletter-section h2 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--PETPAL-dark);
+            color: white;
+            padding: 40px 0 20px;
+        }
+
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--PETPAL-orange);
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 5px;
+            transition: background 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: var(--PETPAL-orange);
+        }
+
+        /* Section Headings */
+        section h2 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--PETPAL-dark);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .hero-content p {
+                font-size: 18px;
+            }
+
+            .hero-carousel {
+                height: 400px;
+            }
+
+            .hero-carousel .carousel-item {
+                height: 400px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+        }
+
+
+        /* Modifications Bellow */
+        @media (max-width: 591px) {
+            .main-header .container {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+
+            .main-header .row {
+                margin-left: -0.5rem;
+                margin-right: -0.5rem;
+            }
+
+            .main-header [class*="col-"] {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+
+            .btn-donate-header {
+                padding: 1.99rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+        }
+
+        .navy {
+            background-color: #f75e02;
+            /* padding: 15px 6px; */
+            border-right: 1px solid #fff;
+            border-radius: 0px !important;
+            width: 87px;
+            height: 88px;
+            align-content: center;
+        }
+
+        .navy:last-child {
+            border-right: 0px solid #b30707;
+        }
+    </style>
+    <style>
+        /* ============================================
+   PROFESSIONAL NAVIGATION MENU STYLES
+   ============================================ */
+
+        :root {
+            --PETPAL-orange: #f75f00;
+            --PETPAL-blue: #0066b3;
+            --PETPAL-dark: #1a1a1a;
+            --PETPAL-white: #fff;
+            --border-radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --PETPAL-shadow: 0 4px 12px rgba(247, 95, 0, 0.1);
+            --header-height: 100px;
+            --header-mobile-height: 80px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.6;
+        color: var(--PETPAL-dark);
+    } */
+
+        /* ============================================
+   HEADER TOP SECTION
+   ============================================ */
+        .header-top {
+            background: var(--PETPAL-dark);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        .header-top .nav-link {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 14px;
+            padding: 8px 15px;
+            transition: var(--transition);
+            font-weight: 500;
+            position: relative;
+        }
+
+        .header-top .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--PETPAL-orange);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .header-top .nav-link:hover {
+            color: var(--PETPAL-orange);
+        }
+
+        .header-top .nav-link:hover::after {
+            width: 60%;
+        }
+
+        /* ============================================
+   MAIN HEADER
+   ============================================ */
+        .main-header {
+            background: white;
+            padding: 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+            position: relative;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .main-header .container {
+            height: var(--header-height);
+            transition: height 0.3s ease;
+        }
+
+        .main-header .row {
+            height: 100%;
+        }
+
+        /* Sticky Header */
+        .main-header.fixed-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            animation: slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        body.header-fixed {
+            padding-top: var(--header-height);
+        }
+
+        /* ============================================
+   LOGO STYLES
+   ============================================ */
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .logo img {
+            max-width: 180px;
+            height: auto;
+            transition: var(--transition);
+        }
+
+        .logo:hover img {
+            transform: scale(1.02);
+        }
+
+        .logo-desktop {
+            display: block;
+        }
+
+        .logo-mobile {
+            display: none;
+        }
+
+        /* ============================================
+   NAVBAR TOGGLER
+   ============================================ */
+        .navbar-toggler {
+            border: 2px solid var(--PETPAL-orange);
+            padding: 8px 12px;
+            background: transparent;
+            border-radius: 8px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .navbar-toggler::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: var(--PETPAL-orange);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s ease, height 0.3s ease;
+            z-index: -1;
+        }
+
+        .navbar-toggler:hover::before {
+            width: 120%;
+            height: 200%;
+        }
+
+        .navbar-toggler:hover .navbar-toggler-icon {
+            filter: brightness(0) invert(1);
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: 0 0 0 3px rgba(247, 95, 0, 0.2);
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(247, 95, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+            width: 28px;
+            height: 28px;
+            transition: var(--transition);
+        }
+
+        /* ============================================
+   MAIN NAVIGATION
+   ============================================ */
+        .main-nav .navbar-nav {
+            gap: 8px;
+        }
+
+        .main-nav .nav-link {
+            color: var(--PETPAL-dark);
+            font-weight: 600;
+            padding: 12px 20px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 10px;
+            font-size: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-nav .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(247, 95, 0, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .main-nav .nav-link:hover::before {
+            left: 100%;
+        }
+
+        .main-nav .nav-link:hover {
+            color: var(--PETPAL-orange);
+            background: rgba(247, 95, 0, 0.05);
+            transform: translateY(-2px);
+        }
+
+        /* ============================================
+   DONATE BUTTON
+   ============================================ */
+        .btn-donate-header {
+            background: var(--PETPAL-orange);
+            color: white;
+            padding: 30px 41px;
+            border-radius: 0;
+            font-weight: 700;
+            border: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-donate-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-donate-header:hover::before {
+            left: 100%;
+        }
+
+        .btn-donate-header:hover {
+            background: #d95400;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(247, 95, 0, 0.4);
+        }
+
+        .btn-donate-header:active {
+            transform: translateY(-1px);
+        }
+
+        /* ============================================
+   MOBILE NAVIGATION (Below 992px)
+   ============================================ */
+        @media (max-width: 991px) {
+            :root {
+                --header-height: var(--header-mobile-height);
+            }
+
+            .main-header .container {
+                height: var(--header-mobile-height);
+            }
+
+            body.header-fixed {
+                padding-top: var(--header-mobile-height);
+            }
+
+            /* Mobile Navigation Menu */
+            #mainNav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: white;
+                box-shadow: none;
+                padding: 0;
+                z-index: 9999;
+                overflow-y: auto;
+                transform: translateX(-100%);
+                transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            #mainNav.show {
+                transform: translateX(0);
+            }
+
+            #mainNav.collapsing {
+                transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            /* Mobile Menu Header */
+            #mainNav .d-flex.align-items-center {
+                background: var(--PETPAL-dark);
+                padding: 15px 20px;
+                position: sticky;
+                top: 0;
+                z-index: 10;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            #mainNav .navbar-toggler {
+                border-color: white;
+            }
+
+            #mainNav .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M6 6L24 24M6 24L24 6'/%3e%3c/svg%3e");
+            }
+
+            /* Mobile Navigation Links */
+            .main-nav .navbar-nav {
+                width: 100%;
+                gap: 0;
+                padding: 20px 0;
+            }
+
+            .main-nav .nav-item {
+                width: 100%;
+                border-bottom: 1px solid rgba(247, 95, 0, 0.1);
+            }
+
+            .main-nav .nav-item:last-child {
+                border-bottom: none;
+            }
+
+            .main-nav .nav-link {
+                padding: 18px 25px;
+                border-radius: 0;
+                background: transparent;
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                transition: all 0.3s ease;
+            }
+
+            .main-nav .nav-link::after {
+                content: '→';
+                opacity: 0;
+                transform: translateX(-10px);
+                transition: all 0.3s ease;
+                color: var(--PETPAL-orange);
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            .main-nav .nav-link:hover {
+                background: linear-gradient(90deg, rgba(247, 95, 0, 0.05), transparent);
+                color: var(--PETPAL-orange);
+                padding-left: 35px;
+                transform: translateY(0);
+            }
+
+            .main-nav .nav-link:hover::after {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            /* Active State for Mobile Nav */
+            .main-nav .nav-link.active {
+                background: rgba(247, 95, 0, 0.1);
+                color: var(--PETPAL-orange);
+                border-left: 4px solid var(--PETPAL-orange);
+            }
+
+            /* Logo Visibility */
+            .logo-desktop {
+                display: none;
+            }
+
+            .logo-mobile {
+                display: block;
+                max-width: 150px;
+            }
+
+            /* Mobile Donate Button */
+            .btn-donate-header {
+                padding: 18px 24px;
+                font-size: 0.95rem;
+                width: 100%;
+                text-align: center;
+                border-radius: 8px;
+                margin: 0;
+            }
+
+            /* Mobile Menu Backdrop */
+            #mainNav::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.4s ease;
+                z-index: -1;
+            }
+
+            #mainNav.show::before {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+
+        /* ============================================
+   SMALL MOBILE (Below 576px)
+   ============================================ */
+        @media (max-width: 575px) {
+            .main-header .container {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+
+            .logo img {
+                max-width: 140px;
+            }
+
+            .btn-donate-header {
+                padding: 20px 16px;
+                font-size: 0.85rem;
+            }
+
+            .main-nav .nav-link {
+                font-size: 15px;
+                padding: 16px 20px;
+            }
+        }
+
+        /* ============================================
+   EXTRA SMALL MOBILE (Below 400px)
+   ============================================ */
+        @media (max-width: 399px) {
+            .logo img {
+                max-width: 120px;
+            }
+
+            .btn-donate-header {
+                padding: 18px 12px;
+                font-size: 0.8rem;
+            }
+
+            .navbar-toggler {
+                padding: 6px 10px;
+            }
+
+            .navbar-toggler-icon {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        /* ============================================
+   ACCESSIBILITY IMPROVEMENTS
+   ============================================ */
+        .main-nav .nav-link:focus,
+        .btn-donate-header:focus,
+        .navbar-toggler:focus {
+            outline: 3px solid var(--PETPAL-orange);
+            outline-offset: 2px;
+        }
+
+        /* Reduce motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* ============================================
+   DESKTOP ENHANCEMENTS (Above 1200px)
+   ============================================ */
+        @media (min-width: 1200px) {
+            .main-nav .nav-link {
+                font-size: 16px;
+                padding: 12px 24px;
+            }
+
+            .btn-donate-header {
+                padding: 30px 50px;
+            }
+        }
+
+        /* ============================================
+   PRINT STYLES
+   ============================================ */
+        @media print {
+
+            .header-top,
+            .navbar-toggler,
+            .btn-donate-header {
+                display: none;
+            }
+
+            .main-header {
+                box-shadow: none;
+                border-bottom: 1px solid #000;
+            }
+        }
+    </style>
+
+    <!-- ============================================ -->
+    <!-- GOLDEN DOG PAW PRELOADER - START -->
+    <!-- ============================================ -->
+
+    <style>
+        /* Preloader Container */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bs-body-bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        #preloader.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Light/Dark Theme Support */
+        [data-bs-theme="light"] #preloader {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%);
+        }
+
+        [data-bs-theme="dark"] #preloader {
+            background: linear-gradient(135deg, #1a1f2e 0%, #0f1419 50%, #1a1f2e 100%);
+        }
+
+        /* Preloader Content */
+        .preloader-content {
+            text-align: center;
+            position: relative;
+        }
+
+        /* Golden Circle Background */
+        .golden-circle {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #daa520, #ffd700);
+            position: relative;
+            animation: pulse-circle 2s ease-in-out infinite;
+            box-shadow: 0 0 40px rgba(218, 165, 32, 0.4),
+                0 0 80px rgba(218, 165, 32, 0.2),
+                inset 0 0 30px rgba(255, 255, 255, 0.2);
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes pulse-circle {
+
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 40px rgba(218, 165, 32, 0.4),
+                    0 0 80px rgba(218, 165, 32, 0.2),
+                    inset 0 0 30px rgba(255, 255, 255, 0.2);
+            }
+
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 60px rgba(218, 165, 32, 0.6),
+                    0 0 100px rgba(218, 165, 32, 0.3),
+                    inset 0 0 40px rgba(255, 255, 255, 0.3);
+            }
+        }
+
+        /* Paw Container */
+        .paw-container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+
+        /* Animated Dog Paws */
+        .paw {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            animation: bounce-paw 1.5s ease-in-out infinite;
+        }
+
+        .paw-1 {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-delay: 0s;
+        }
+
+        .paw-2 {
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            animation-delay: 0.3s;
+        }
+
+        .paw-3 {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-delay: 0.6s;
+        }
+
+        .paw-4 {
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            animation-delay: 0.9s;
+        }
+
+        @keyframes bounce-paw {
+
+            0%,
+            100% {
+                transform: scale(0.8) translateY(0);
+                opacity: 0.6;
+            }
+
+            50% {
+                transform: scale(1.2) translateY(-10px);
+                opacity: 1;
+            }
+        }
+
+        /* SVG Paw Print */
+        .paw svg {
+            width: 100%;
+            height: 100%;
+            fill: #ffffff;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+        }
+
+        /* Loading Text */
+        .loading-text {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #daa520, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            animation: shimmer 2s linear infinite;
+            background-size: 200% 100%;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        /* Loading Dots */
+        .loading-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #daa520, #ffd700);
+            animation: dot-bounce 1.4s ease-in-out infinite;
+            box-shadow: 0 0 10px rgba(218, 165, 32, 0.5);
+        }
+
+        .dot:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes dot-bounce {
+
+            0%,
+            80%,
+            100% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+
+            40% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            width: 250px;
+            height: 4px;
+            background: rgba(218, 165, 32, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px auto 0;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #daa520, #ffd700, #daa520);
+            background-size: 200% 100%;
+            border-radius: 10px;
+            animation: progress-flow 1.5s linear infinite;
+            box-shadow: 0 0 10px rgba(218, 165, 32, 0.5);
+        }
+
+        @keyframes progress-flow {
+            0% {
+                background-position: 0% 0;
+            }
+
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        /* Sparkle Effect */
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #ffd700;
+            border-radius: 50%;
+            animation: sparkle-float 3s ease-in-out infinite;
+            box-shadow: 0 0 10px #ffd700;
+        }
+
+        .sparkle:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .sparkle:nth-child(2) {
+            top: 20%;
+            right: 15%;
+            animation-delay: 0.5s;
+        }
+
+        .sparkle:nth-child(3) {
+            bottom: 15%;
+            left: 20%;
+            animation-delay: 1s;
+        }
+
+        .sparkle:nth-child(4) {
+            bottom: 20%;
+            right: 10%;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes sparkle-float {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(0);
+                opacity: 0;
+            }
+
+            50% {
+                transform: translateY(-20px) scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 576px) {
+            .golden-circle {
+                width: 140px;
+                height: 140px;
+            }
+
+            .paw-container {
+                width: 80px;
+                height: 80px;
+            }
+
+            .paw {
+                width: 32px;
+                height: 32px;
+            }
+
+            .loading-text {
+                font-size: 20px;
+            }
+
+            .progress-container {
+                width: 200px;
+            }
+        }
+    </style>
+
+    <!-- Preloader HTML -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <!-- Sparkles -->
+            <span class="sparkle"></span>
+            <span class="sparkle"></span>
+            <span class="sparkle"></span>
+            <span class="sparkle"></span>
+
+            <!-- Golden Circle with Paws -->
+            <div class="golden-circle">
+                <div class="paw-container">
+                    <!-- Paw 1 (Top) -->
+                    <div class="paw paw-1">
+                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M256 224c-79.41 0-192 122.76-192 200.25 0 34.9 26.81 55.75 71.74 55.75 48.84 0 81.09-25.08 120.26-25.08 39.51 0 71.85 25.08 120.26 25.08 44.93 0 71.74-20.85 71.74-55.75C448 346.76 335.41 224 256 224zm-147.28-12.61c-10.4-34.65-42.44-57.09-71.56-50.13-29.12 6.96-44.29 40.69-33.89 75.34 10.4 34.65 42.44 57.09 71.56 50.13 29.12-6.96 44.29-40.69 33.89-75.34zm84.72-20.78c30.94-8.14 46.42-49.94 34.58-93.36s-46.52-72.01-77.46-63.87-46.42 49.94-34.58 93.36c11.84 43.42 46.53 72.02 77.46 63.87zm281.39-29.34c-29.12-6.96-61.15 15.48-71.56 50.13-10.4 34.65 4.77 68.38 33.89 75.34 29.12 6.96 61.15-15.48 71.56-50.13 10.4-34.65-4.77-68.38-33.89-75.34zm-156.27 29.34c30.94 8.14 65.62-20.45 77.46-63.87 11.84-43.42-3.64-85.21-34.58-93.36s-65.62 20.45-77.46 63.87c-11.84 43.42 3.64 85.22 34.58 93.36z" />
+                        </svg>
+                    </div>
+
+                    <!-- Paw 2 (Right) -->
+                    <div class="paw paw-2">
+                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M256 224c-79.41 0-192 122.76-192 200.25 0 34.9 26.81 55.75 71.74 55.75 48.84 0 81.09-25.08 120.26-25.08 39.51 0 71.85 25.08 120.26 25.08 44.93 0 71.74-20.85 71.74-55.75C448 346.76 335.41 224 256 224zm-147.28-12.61c-10.4-34.65-42.44-57.09-71.56-50.13-29.12 6.96-44.29 40.69-33.89 75.34 10.4 34.65 42.44 57.09 71.56 50.13 29.12-6.96 44.29-40.69 33.89-75.34zm84.72-20.78c30.94-8.14 46.42-49.94 34.58-93.36s-46.52-72.01-77.46-63.87-46.42 49.94-34.58 93.36c11.84 43.42 46.53 72.02 77.46 63.87zm281.39-29.34c-29.12-6.96-61.15 15.48-71.56 50.13-10.4 34.65 4.77 68.38 33.89 75.34 29.12 6.96 61.15-15.48 71.56-50.13 10.4-34.65-4.77-68.38-33.89-75.34zm-156.27 29.34c30.94 8.14 65.62-20.45 77.46-63.87 11.84-43.42-3.64-85.21-34.58-93.36s-65.62 20.45-77.46 63.87c-11.84 43.42 3.64 85.22 34.58 93.36z" />
+                        </svg>
+                    </div>
+
+                    <!-- Paw 3 (Bottom) -->
+                    <div class="paw paw-3">
+                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M256 224c-79.41 0-192 122.76-192 200.25 0 34.9 26.81 55.75 71.74 55.75 48.84 0 81.09-25.08 120.26-25.08 39.51 0 71.85 25.08 120.26 25.08 44.93 0 71.74-20.85 71.74-55.75C448 346.76 335.41 224 256 224zm-147.28-12.61c-10.4-34.65-42.44-57.09-71.56-50.13-29.12 6.96-44.29 40.69-33.89 75.34 10.4 34.65 42.44 57.09 71.56 50.13 29.12-6.96 44.29-40.69 33.89-75.34zm84.72-20.78c30.94-8.14 46.42-49.94 34.58-93.36s-46.52-72.01-77.46-63.87-46.42 49.94-34.58 93.36c11.84 43.42 46.53 72.02 77.46 63.87zm281.39-29.34c-29.12-6.96-61.15 15.48-71.56 50.13-10.4 34.65 4.77 68.38 33.89 75.34 29.12 6.96 61.15-15.48 71.56-50.13 10.4-34.65-4.77-68.38-33.89-75.34zm-156.27 29.34c30.94 8.14 65.62-20.45 77.46-63.87 11.84-43.42-3.64-85.21-34.58-93.36s-65.62 20.45-77.46 63.87c-11.84 43.42 3.64 85.22 34.58 93.36z" />
+                        </svg>
+                    </div>
+
+                    <!-- Paw 4 (Left) -->
+                    <div class="paw paw-4">
+                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M256 224c-79.41 0-192 122.76-192 200.25 0 34.9 26.81 55.75 71.74 55.75 48.84 0 81.09-25.08 120.26-25.08 39.51 0 71.85 25.08 120.26 25.08 44.93 0 71.74-20.85 71.74-55.75C448 346.76 335.41 224 256 224zm-147.28-12.61c-10.4-34.65-42.44-57.09-71.56-50.13-29.12 6.96-44.29 40.69-33.89 75.34 10.4 34.65 42.44 57.09 71.56 50.13 29.12-6.96 44.29-40.69 33.89-75.34zm84.72-20.78c30.94-8.14 46.42-49.94 34.58-93.36s-46.52-72.01-77.46-63.87-46.42 49.94-34.58 93.36c11.84 43.42 46.53 72.02 77.46 63.87zm281.39-29.34c-29.12-6.96-61.15 15.48-71.56 50.13-10.4 34.65 4.77 68.38 33.89 75.34 29.12 6.96 61.15-15.48 71.56-50.13 10.4-34.65-4.77-68.38-33.89-75.34zm-156.27 29.34c30.94 8.14 65.62-20.45 77.46-63.87 11.84-43.42-3.64-85.21-34.58-93.36s-65.62 20.45-77.46 63.87c-11.84 43.42 3.64 85.22 34.58 93.36z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading Text -->
+            <div class="loading-text">Loading...</div>
+
+            <!-- Loading Dots -->
+            <div class="loading-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preloader Script -->
+    <script>
+        // Preloader fade out on page load
+        window.addEventListener('load', function () {
+            const preloader = document.getElementById('preloader');
+
+            // Add a minimum display time of 800ms for better UX
+            setTimeout(function () {
+                preloader.classList.add('fade-out');
+
+                // Remove from DOM after fade completes
+                setTimeout(function () {
+                    preloader.remove();
+                }, 500);
+            }, 800);
+        });
+
+        // Fallback: Remove preloader after 5 seconds even if page hasn't fully loaded
+        setTimeout(function () {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.classList.add('fade-out');
+                setTimeout(function () {
+                    if (preloader.parentNode) {
+                        preloader.remove();
+                    }
+                }, 500);
+            }
+        }, 5000);
+    </script>
+
+    <!-- ============================================ -->
+    <!-- GOLDEN DOG PAW PRELOADER - END -->
+    <!-- ============================================ -->
+
+</head>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+<!-- Credit Card Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    .donation-container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 0 15px;
+    }
+
+    .donation-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .donation-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 40px 30px;
+        text-align: center;
+    }
+
+    .donation-header h1 {
+        margin: 0 0 10px 0;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .donation-header p {
+        margin: 0;
+        opacity: 0.95;
+        font-size: 16px;
+    }
+
+    /* Progress Steps */
+    .progress-steps {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 50px;
+        background: #f8f9fa;
+        position: relative;
+    }
+
+    .progress-steps::before {
+        content: '';
+        position: absolute;
+        top: 60px;
+        left: 50px;
+        right: 50px;
+        height: 2px;
+        background: #e0e0e0;
+        z-index: 0;
+    }
+
+    .step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        flex: 1;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #e0e0e0;
+        color: #999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        margin-bottom: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .step.active .step-number {
+        background: #667eea;
+        color: white;
+        transform: scale(1.1);
+    }
+
+    .step.completed .step-number {
+        background: #28a745;
+        color: white;
+    }
+
+    .step-label {
+        font-size: 12px;
+        color: #666;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .step.active .step-label {
+        color: #667eea;
+        font-weight: 600;
+    }
+
+    /* Form Steps */
+    .form-step {
+        display: none;
+        padding: 40px 50px;
+    }
+
+    .form-step.active {
+        display: block;
+        animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .form-step h3 {
+        margin: 0 0 25px 0;
+        color: #333;
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    /* Amount Selection */
+    .amount-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .amount-option {
+        padding: 20px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: white;
+        font-size: 24px;
+        font-weight: 700;
+        color: #333;
+    }
+
+    .amount-option:hover {
+        border-color: #667eea;
+        background: #f8f9ff;
+    }
+
+    .amount-option.selected {
+        border-color: #667eea;
+        background: #667eea;
+        color: white;
+    }
+
+    .custom-amount {
+        margin-top: 20px;
+    }
+
+    .custom-amount input {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        transition: border-color 0.3s ease;
+    }
+
+    .custom-amount input:focus {
+        border-color: #667eea;
+        outline: none;
+    }
+
+    /* Payment Methods */
+    .payment-methods {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .payment-method {
+        padding: 20px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+        background: white;
+    }
+
+    .payment-method:hover {
+        border-color: #667eea;
+        background: #f8f9ff;
+    }
+
+    .payment-method.selected {
+        border-color: #667eea;
+        background: #667eea;
+        color: white;
+    }
+
+    .payment-method i {
+        font-size: 32px;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .payment-method .method-name {
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    /* Credit Card Form */
+    .credit-card-form {
+        display: none;
+        margin-top: 25px;
+        padding: 25px;
+        background: #f8f9fa;
+        border-radius: 8px;
+    }
+
+    .credit-card-form.show {
+        display: block;
+    }
+
+    .card-input-wrapper {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .card-input-wrapper input {
+        width: 100%;
+        padding: 15px 50px 15px 15px;
+        font-size: 16px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .card-input-wrapper input:focus {
+        border-color: #667eea;
+        outline: none;
+    }
+
+    .card-input-wrapper input.valid {
+        border-color: #28a745;
+    }
+
+    .card-input-wrapper input.invalid {
+        border-color: #dc3545;
+    }
+
+    .card-type-icon {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 28px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .card-type-icon.show {
+        opacity: 1;
+    }
+
+    .card-type-icon.visa {
+        color: #1A1F71;
+    }
+
+    .card-type-icon.mastercard {
+        color: #EB001B;
+    }
+
+    .card-type-icon.amex {
+        color: #006FCF;
+    }
+
+    .card-type-icon.discover {
+        color: #FF6000;
+    }
+
+    .card-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .security-badges {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #e0e0e0;
+    }
+
+    .security-badge {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        color: #666;
+    }
+
+    .security-badge i {
+        color: #28a745;
+    }
+
+    /* Crypto Options */
+    .crypto-options {
+        display: none;
+        margin-top: 20px;
+    }
+
+    .crypto-options.show {
+        display: block;
+    }
+
+    .crypto-option {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        margin-bottom: 12px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        cursor: pointer;
+        background: white;
+        transition: all 0.3s ease;
+    }
+
+    .crypto-option:hover {
+        border-color: #667eea;
+        background: #f8f9ff;
+    }
+
+    .crypto-option.selected {
+        border-color: #667eea;
+        background: #667eea;
+        color: white;
+    }
+
+    .crypto-option input[type="radio"] {
+        margin-right: 12px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .crypto-info {
+        flex: 1;
+    }
+
+    .crypto-name {
+        font-weight: 600;
+        font-size: 15px;
+        margin-bottom: 3px;
+    }
+
+    .crypto-network {
+        font-size: 12px;
+        opacity: 0.8;
+    }
+
+    /* QR Code Display */
+    .qr-code-display {
+        margin-top: 20px;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .qr-code-display img {
+        max-width: 250px;
+        height: auto;
+        margin: 15px auto;
+        display: block;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .wallet-address {
+        background: #f8f9fa;
+        padding: 12px;
+        border-radius: 6px;
+        font-family: monospace;
+        font-size: 13px;
+        word-break: break-all;
+        margin: 15px 0;
+        border: 1px solid #e0e0e0;
+    }
+
+    .copy-address-btn {
+        padding: 8px 20px;
+        background: #667eea;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 13px;
+        transition: all 0.3s ease;
+    }
+
+    .copy-address-btn:hover {
+        background: #5568d3;
+    }
+
+    .copy-address-btn.copied {
+        background: #28a745;
+    }
+
+    /* Form Controls */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #333;
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 14px;
+        transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        border-color: #667eea;
+        outline: none;
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    .checkbox-group {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+        margin-right: 10px;
+        margin-top: 3px;
+        width: auto;
+    }
+
+    .checkbox-group label {
+        margin: 0;
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    /* Navigation Buttons */
+    .form-navigation {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 50px;
+        background: #f8f9fa;
+        border-top: 1px solid #e0e0e0;
+    }
+
+
+    .btn-primary {
+        background: #667eea;
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background: #5568d3;
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+        background: #6c757d;
+        color: white;
+    }
+
+    .btn-secondary:hover {
+        background: #5a6268;
+    }
+
+    .btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none !important;
+    }
+
+    /* Payment Details */
+    .payment-details {
+        display: none;
+        margin-top: 20px;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 8px;
+    }
+
+    .payment-details.show {
+        display: block;
+    }
+
+    .payment-info {
+        background: white;
+        padding: 15px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+    }
+
+    .payment-info strong {
+        display: block;
+        margin-bottom: 5px;
+        color: #667eea;
+    }
+
+    .payment-info p {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+    /* Alert Styles */
+    .alert {
+        padding: 12px 15px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+    }
+
+    .alert-info {
+        background: #d1ecf1;
+        border: 1px solid #bee5eb;
+        color: #0c5460;
+    }
+
+    .alert-warning {
+        background: #fff3cd;
+        border: 1px solid #ffeaa7;
+        color: #856404;
+    }
+
+    .alert i {
+        margin-right: 8px;
+    }
+
+    /* PayPal Container */
+    #paypal-button-container {
+        margin-top: 20px;
+        min-height: 150px;
+    }
+
+    /* Summary */
+    .donation-summary {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+    .summary-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .summary-row.total {
+        font-size: 18px;
+        font-weight: 700;
+        color: #667eea;
+        padding-top: 10px;
+        border-top: 2px solid #e0e0e0;
+        margin-top: 10px;
+    }
+
+    /* Loading Spinner */
+    .loading-spinner {
+        display: none;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .spinner {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #667eea;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .progress-steps {
+            padding: 20px 20px;
+        }
+
+        .progress-steps::before {
+            left: 20px;
+            right: 20px;
+        }
+
+        .form-step {
+            padding: 30px 20px;
+        }
+
+        .form-navigation {
+            padding: 20px;
+        }
+
+        .amount-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .payment-methods {
+            grid-template-columns: 1fr;
+        }
+
+        .step-label {
+            font-size: 10px;
+        }
+
+        .card-row {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+
+<body>
+    <!-- Header Top -->
+    <div class="header-top">
+        <div class="container">
+            <div class="d-flex justify-content-end">
+                <nav class="navbar navbar-expand">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="adoption.html">Adopt</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="donate.html">PETPAL Pro</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header" id="mainHeader">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-3 d-flex align-items-center">
+                    <button class="navbar-toggler d-lg-none me-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mainNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <a href="index.html" class="logo d-flex align-items-center">
+                        <!-- Uncomment the line below if you also wish to use an image logo -->
+                        <img src="assets/img/banner-black.png" alt="" style="min-width: 146px; margin-right: 7px;">
+                        <!-- <h1 class="sitename">Moderna</h1> -->
+                    </a>
+                    <!--<a href="#" class="logo logo-desktop">PETPAL</a>-->
+                    <!--<a href="#" class="logo logo-mobile">PETPAL</a>-->
+                </div>
+                <div class="col-lg-7 col-3">
+                    <nav class="navbar navbar-expand-lg main-nav p-0">
+                        <div class="collapse navbar-collapse" id="mainNav" style="height: 100%;">
+
+                            <div class="d- align-items-center">
+                                <button class="navbar-toggler d-lg-none me-3" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#mainNav" style="margin-left: 66px;">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                                <a href="index.html" class="logo d-flex align-items-center">
+                                    <!-- Uncomment the line below if you also wish to use an image logo -->
+                                    <img src="assets/img/banner-black.png" class="logo-mobile" alt=""
+                                        style="min-width: 146px; margin-right: 7px;">
+                                    <!-- <h1 class="sitename">Moderna</h1> -->
+                                </a>
+
+                                <!-- <a href="#" class="logo logo-desktop">PETPAL D</a> -->
+                                <!--<a href="#" class="logo logo-mobile">PETPAL</a>-->
+                            </div>
+                            <ul class="navbar-nav">
+                                <li class="nav-item navy"><a class="nav-link " href="category.html?slug=pet-care">Our
+                                        Work</a></li>
+                                <li class="nav-item navy"><a class="nav-link "
+                                        href="category.html?slug=local-services">Local
+                                        Services</a></li>
+                                <li class="nav-item navy"><a class="nav-link "
+                                        href="category.html?slug=support-giving">How
+                                        You Can Help</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-lg-2 col-6 text-end">
+                    <a href="donate.html" class=" btn-donate-header">Donate</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="donation-container">
+            <div class="donation-card">
+                <div class="donation-header">
+                    <h1>🐾 Make a Donation</h1>
+                    <p>Your generosity helps us continue our mission and make a difference</p>
+                </div>
+
+                <!-- Progress Steps -->
+                <div class="progress-steps">
+                    <div class="step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Amount</div>
+                    </div>
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Payment</div>
+                    </div>
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Details</div>
+                    </div>
+                    <div class="step" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-label">Confirm</div>
+                    </div>
+                </div>
+
+                <!-- Donation Form -->
+                <form id="donationForm">
+                    <!-- Step 1: Amount -->
+                    <div class="form-step active" data-step="1">
+                        <h3>💰 Select Donation Amount</h3>
+                        <div class="amount-grid">
+                            <div class="amount-option" data-amount="50">$50</div>
+                            <div class="amount-option" data-amount="100">$100</div>
+                            <div class="amount-option" data-amount="250">$250</div>
+                            <div class="amount-option" data-amount="500">$500</div>
+                            <div class="amount-option" data-amount="1000">$1,000</div>
+                            <div class="amount-option" data-amount="custom">Custom</div>
+                        </div>
+                        <div class="custom-amount" style="display: none;">
+                            <input type="number" id="customAmount" placeholder="Enter custom amount" min="1"
+                                step="0.01">
+                        </div>
+                        <input type="hidden" id="selectedAmount" name="amount" required>
+                    </div>
+
+                    <!-- Step 2: Payment Method -->
+                    <div class="form-step" data-step="2">
+                        <h3>💳 Choose Payment Method</h3>
+                        <div class="payment-methods" id="paymentMethodsContainer">
+                            <!-- Payment methods will be loaded dynamically -->
+                        </div>
+
+                        <!-- Credit Card Form -->
+                        <div class="credit-card-form" id="creditCardForm">
+                            <h4>Enter Card Details</h4>
+                            <div class="card-input-wrapper">
+                                <input type="text" id="cardNumber" placeholder="Card Number" maxlength="19"
+                                    autocomplete="cc-number">
+                                <div class="card-type-icon" id="cardTypeIcon"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="cardName" placeholder="Cardholder Name" autocomplete="cc-name">
+                            </div>
+                            <div class="card-row">
+                                <div class="form-group">
+                                    <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5"
+                                        autocomplete="cc-exp">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="cardCVV" placeholder="CVV" maxlength="4"
+                                        autocomplete="cc-csc">
+                                </div>
+                            </div>
+                            <div class="security-badges">
+                                <div class="security-badge">
+                                    <i class="fas fa-lock"></i>
+                                    <span>Secure Payment</span>
+                                </div>
+                                <div class="security-badge">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>SSL Encrypted</span>
+                                </div>
+                                <div class="security-badge">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>PCI Compliant</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cryptocurrency Options -->
+                        <div class="crypto-options" id="cryptoOptions">
+                            <h4 style="margin-top: 0;">Select Cryptocurrency</h4>
+                            <div id="cryptoWalletsList">
+                                <!-- Crypto wallets will be loaded dynamically -->
+                            </div>
+                        </div>
+
+                        <input type="hidden" id="selectedPaymentMethod" name="payment_method" required>
+                        <input type="hidden" id="selectedCryptoType" name="crypto_type">
+                        <input type="hidden" id="selectedCryptoNetwork" name="crypto_network">
+                    </div>
+
+                    <!-- Step 3: Personal Details -->
+                    <div class="form-step" data-step="3">
+                        <h3>👤 Your Information</h3>
+                        <div class="form-group">
+                            <label for="donorName">Full Name *</label>
+                            <input type="text" id="donorName" name="donor_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="donorEmail">Email Address *</label>
+                            <input type="email" id="donorEmail" name="donor_email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message (Optional)</label>
+                            <textarea id="message" name="message"
+                                placeholder="Share why you're donating or leave a message..."></textarea>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="isAnonymous" name="is_anonymous" value="1">
+                            <label for="isAnonymous">Make my donation anonymous</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="allowUpdates" name="allow_updates" value="1" checked>
+                            <label for="allowUpdates">Send me updates about how my donation is making an impact</label>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Review & Confirm -->
+                    <div class="form-step" data-step="4">
+                        <h3>✅ Review Your Donation</h3>
+                        <div class="donation-summary">
+                            <div class="summary-row">
+                                <span>Donation Amount:</span>
+                                <span id="summaryAmount">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Payment Method:</span>
+                                <span id="summaryPaymentMethod">-</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Name:</span>
+                                <span id="summaryName">-</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Email:</span>
+                                <span id="summaryEmail">-</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total:</span>
+                                <span id="summaryTotal">$0.00</span>
+                            </div>
+                        </div>
+
+                        <!-- Payment Instructions -->
+                        <div class="payment-details" id="paymentInstructions">
+                            <!-- Dynamic content will be inserted here -->
+                        </div>
+
+                        <!-- PayPal Button Container -->
+                        <div id="paypal-button-container"></div>
+
+                        <div class="form-group" id="transactionRefGroup" style="display: none;">
+                            <label for="transactionRef">Transaction Reference (Optional)</label>
+                            <input type="text" id="transactionRef" name="transaction_reference"
+                                placeholder="Enter transaction ID or reference number">
+                        </div>
+
+                        <!-- Loading Spinner -->
+                        <div class="loading-spinner" id="loadingSpinner">
+                            <div class="spinner"></div>
+                            <p style="color: #666;">Processing your donation...</p>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn-secondary" id="prevBtn" style="display: none;">
+                            <i class="bi bi-arrow-left"></i> Previous
+                        </button>
+                        <div></div>
+                        <button type="button" class="btn btn-primary" id="nextBtn">
+                            Next <i class="bi bi-arrow-right"></i>
+                        </button>
+                        <button type="submit" class="btn btn-primary" id="submitBtn" style="display: none;">
+                            <i class="bi bi-check-circle"></i> Complete Donation
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Success Modal for Credit Card -->
+    <div class="modal fade" id="successModalCreditCard" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <i class="fas fa-credit-card text-primary"></i>
+                    <h3>Thank You!</h3>
+                    <p id="successMessageCreditCard">Your credit card donation has been received successfully. We truly
+                        appreciate your generosity and support.</p>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal for Other Payment Methods -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <i class="bi bi-check-circle-fill text-success"></i>
+                    <h3>Thank You!</h3>
+                    <p id="successMessage">Your donation has been submitted successfully. We truly appreciate your
+                        generosity and support.</p>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <i class="bi bi-exclamation-circle-fill text-danger"></i>
+                    <h3>Oops!</h3>
+                    <p id="errorMessage">Something went wrong. Please try again.</p>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <style>
+        @media (min-width: 1140px) {
+            ul.partnerships {
+                width: 300px;
+            }
+        }
+
+        .partnerships {
+            text-align: center;
+            list-style-type: none;
+            width: auto;
+            margin: 0 auto;
+        }
+    </style>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-warning">Global PETPALS</h5>
+                    <p class="small">Global Society for the Prevention of Cruelty to Animals</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h6>Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h6>Resources</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="category.html?slug=pet-care">Pet Care</a></li>
+                        <li><a href="adoption.html">Adopt a Pet</a></li>
+                        <li><a href="donate.html">Get Involved</a></li>
+                        <li><a href="adoption.html">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h6>Follow Us</h6>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <hr class="border-secondary">
+                <div class="col-12 mb-4 ">
+                    <div class="partnerships">
+                        <h4>Our Partnerships</h4>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4 ">
+                    <div class="partnerships">
+
+                        <img src="assets/img/subaru.png" style="width: 102px;">
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4 ">
+                    <div class="partnerships">
+
+                        <img src="assets/img/my-pet-insurance-white.png" style="width: 102px;">
+                        <p>Underwritten by Independence American Insurance Company</p>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center small">
+                <p>©2026 PETPAL. All rights reserved.</p>
+                <p>The PETPAL is a 501(c)(3) not-for-profit organization.</p>
+
+                <img src="assets/img/charity-navigator.jpg" style="width: 102px;">
+                <img src="assets/img/silver-transparency.jpg" style="width: 102px;">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // // Hide loader after page loads
+        // window.addEventListener('load', function() {
+        //     setTimeout(function() {
+        //         document.getElementById('pageLoader').classList.add('hidden');
+        //     }, 1500);
+        // });
+
+        // Fixed header on scroll
+        let lastScroll = 0;
+        const header = document.getElementById('mainHeader');
+        const headerTop = document.querySelector('.header-top');
+        const headerHeight = headerTop ? headerTop.offsetHeight : 0;
+
+        window.addEventListener('scroll', function () {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > headerHeight + 50) {
+                header.classList.add('fixed-top');
+                document.body.classList.add('header-fixed');
+            } else {
+                header.classList.remove('fixed-top');
+                document.body.classList.remove('header-fixed');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+    <script>
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(reg => console.log('Service Worker registered'))
+                    .catch(err => console.log('Service Worker registration failed'));
+            });
+        }
+    </script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Donation Form Demo Script -->
+    <script src="donation-form-demo.js"></script>
+</body>
+
+</html>
